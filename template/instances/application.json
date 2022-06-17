@@ -1,0 +1,26 @@
+{
+  "kind": "template",
+  "flavor": "default",
+  "version": "latest",
+  "lifecycle": "ENVIRONMENT<default specified in module, need not be overriden>",
+  "disabled": false,
+  "provided": true,
+  "metadata": {
+
+  },
+  "spec": {
+  },
+  "out": {
+    "ports": {
+      "grpc": 3000
+    },
+    "sizing": {
+      "GENERAL_PURPOSE": {
+        "SMALL":{
+          "cpu": "1",
+          "memory": "4GB"
+        }
+      }
+    }
+  }
+}

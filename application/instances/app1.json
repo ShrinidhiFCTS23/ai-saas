@@ -1,0 +1,66 @@
+{
+  "kind": "application",
+  "flavor": "default",
+  "version": "latest",
+  "lifecycle": "ENVIRONMENT<default specified in module, need not be overriden>",
+  "disabled": false,
+  "provided": true,
+  "metadata": {
+    "labels": {
+      "sidecar.istio.io/inject": "true"
+    },
+    "annotations": {
+      "traffic.sidecar.istio.io/excludeOutboundIPRanges": "*"
+    }
+  },
+  "spec": {
+    "release": {
+      "strategy": "RollingUpdate",
+      "build": {
+        "artifactory": "default",
+        "name": "alpha-stack-app1"
+      }
+    },
+    "runtime": {
+      "autoscaling": {
+        "min": 1,
+        "max": 2,
+        "cpuThreshold": 50
+      },
+      "ports": [
+        {
+          "name": "grpc",
+          "port": "${template.application.out.ports.grpc}"
+        },
+        {
+          "name": "custom-metrics",
+          "port": 9110
+        }
+      ],
+      "metrics": [
+        {
+          "portName": "custom-metrics",
+          "path": "/"
+        }
+      ],
+      "size": "${template.application.out.sizing.GENERAL_PURPOSE.SMALL} <Complex object example - check feasibility>"
+    },
+    "env": {
+      "LOG_LEVEL": "INFO",
+      "NEWRELIC_KEY": "${stack.out.variables.NEW_RELIC_KEY}",
+      "REGION": "${stack.out.variables.REGION}"
+    },
+    "permission": []
+  },
+  "out": {
+    "comment": "Will be generated, or can be provided",
+    "interface": {
+      "main": {
+        "port": 1000,
+        "host": "app1.namespace",
+        "username": "user",
+        "password": "password"
+      }
+    }
+  }
+}
