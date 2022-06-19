@@ -1,0 +1,40 @@
+{
+  "kind": "loadbalancer",
+  "flavor": "default",
+  "version": "latest",
+  "lifecycle": "ENVIRONMENT<default specified in module, need not be overriden>",
+  "disabled": false,
+  "provided": false,
+  "metadata": {
+  },
+  "spec": {
+    "internal": true,
+    "authenticated": true,
+    "domains": {
+      "mpl-main": {
+        "alias": "x",
+        "certificateRef": "Secret Name",
+        "url": "mpl.com"
+      }
+    },
+    "rules": {
+      "api-routing": {
+        "path": "/",
+        "prefix": "app1",
+        "service": "${application.app1.interfaces.grpc.host}",
+        "port": "${application.app1.interfaces.grpc.port}"
+      }
+    }
+  },
+  "out": {
+    "comment": "Will be generated, or can be provided",
+    "interface": {
+      "main": {
+        "port": 1000,
+        "host": "app1.namespace",
+        "username": "user",
+        "password": "password"
+      }
+    }
+  }
+}

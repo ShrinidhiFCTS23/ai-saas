@@ -27,22 +27,16 @@
         "max": 2,
         "cpuThreshold": 50
       },
-      "ports": [
-        {
-          "name": "grpc",
-          "port": "${template.application.out.ports.grpc}"
-        },
-        {
-          "name": "custom-metrics",
-          "port": 9110
-        }
-      ],
-      "metrics": [
-        {
+      "ports": {
+        "grpc": "${template.application.out.ports.grpc}",
+        "custom-metrics": 9110
+      },
+      "metrics": {
+        "custom": {
           "portName": "custom-metrics",
           "path": "/"
         }
-      ],
+      },
       "size": "${template.application.out.sizing.GENERAL_PURPOSE.SMALL} <Complex object example - check feasibility>"
     },
     "env": {
@@ -55,7 +49,13 @@
   "out": {
     "comment": "Will be generated, or can be provided",
     "interface": {
-      "main": {
+      "grpc": {
+        "port": 1000,
+        "host": "app1.namespace",
+        "username": "user",
+        "password": "password"
+      },
+      "custom-metrics": {
         "port": 1000,
         "host": "app1.namespace",
         "username": "user",
