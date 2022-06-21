@@ -45,5 +45,19 @@
         "password": "password"
       }
     }
+  },
+  "advanced": {
+    "ingress-helm": {
+      "spec": {
+        "chart": "",
+        "repository": "",
+        "comment": "check here for all attributes https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release",
+        "value": {
+          "example": {
+            "region": "${stack.out.variables.REGION}"
+          }
+        }
+      }
+    }
   }
 }
