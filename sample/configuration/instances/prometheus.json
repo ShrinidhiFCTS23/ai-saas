@@ -7,15 +7,23 @@
   "provided": true,
   "spec": {
     "diskSize": "100G",
-    "cpu": 2,
-    "memory": "3GB"
+    "size": {
+      "cpu": 1,
+      "memory": 1
+    }
   },
   "out": {
     "comment": "Will be generated, or can be provided",
     "interface": {
-      "main": {
+      "prometheus": {
         "port": 1000,
         "host": "prometheus.namespace",
+        "username": "user",
+        "password": "password"
+      },
+      "alertManager": {
+        "port": 1000,
+        "host": "alert-manager.namespace",
         "username": "user",
         "password": "password"
       }

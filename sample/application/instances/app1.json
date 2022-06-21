@@ -5,7 +5,9 @@
   "lifecycle": "ENVIRONMENT<default specified in module, need not be overriden>",
   "disabled": false,
   "provided": true,
+  "dependsOn": ["application.app2","redis.main"],
   "metadata": {
+    "name": "app1",
     "labels": {
       "sidecar.istio.io/inject": "true"
     },

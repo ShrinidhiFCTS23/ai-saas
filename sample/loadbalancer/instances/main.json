@@ -10,9 +10,12 @@
   "spec": {
     "internal": true,
     "authenticated": true,
+    "size": {
+      "cpu": 1,
+      "memory": 1
+    },
     "domains": {
       "mpl-main": {
-        "alias": "x",
         "certificateRef": "Secret Name",
         "url": "mpl.com"
       }
@@ -21,17 +24,23 @@
       "api-routing": {
         "path": "/",
         "prefix": "app1",
-        "service": "${application.app1.interfaces.grpc.host}",
-        "port": "${application.app1.interfaces.grpc.port}"
+        "service": "${application.app1.out.interfaces.grpc.host}",
+        "port": "${application.app1.out.interfaces.grpc.port}"
       }
     }
   },
   "out": {
     "comment": "Will be generated, or can be provided",
     "interface": {
-      "main": {
-        "port": 1000,
-        "host": "app1.namespace",
+      "default": {
+        "port": 443,
+        "host": "xyz.com",
+        "username": "user",
+        "password": "password"
+      },
+      "mpl-main": {
+        "port": 443,
+        "host": "mpl.com",
         "username": "user",
         "password": "password"
       }

@@ -1,0 +1,12 @@
+{
+  "out": {
+    "interface": {
+      "anyName": {
+        "port": 1000,
+        "host": "hostname",
+        "username": "user",
+        "password": "password"
+      }
+    }
+  }
+}
