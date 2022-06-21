@@ -7,5 +7,12 @@
     "module.prometheus"
   ],
   "lifecycle": "ENVIRONMENT",
-  "inputType": "instance"
+  "inputType": "instance",
+  "advanced": {
+    "helm_ingress": {
+      "description": "doc url",
+      "provider": "helm",
+      "flavor": "default"
+    }
+  }
 }
