@@ -33,6 +33,14 @@ locals{
 data "tf_remote_state" "cluster_state"{
 
 }
+
+module "application_app3"{
+  source = "stub_disabled"
+}
+
+module "mysql_main"{
+  source = "stub_provided"
+}
 # Bootstrap
 module "prometheus"{
   configuration = local.prometheus_config
@@ -63,7 +71,7 @@ module "application_app1"{
     application_service2 = module.application_service2
   }
   providers = {
-    "tooling" = ""
+    "tooling" = "aws.tooling"
   }
   depends_on = [
     module.prometheus,
