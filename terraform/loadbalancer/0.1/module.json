@@ -1,0 +1,11 @@
+{
+  "provides": "loadbalancer",
+  "flavour": "default",
+  "supportedCloud": ["all"],
+  "version": "0.1",
+  "dependsOn": [
+    "module.prometheus"
+  ],
+  "lifecycle": "ENVIRONMENT",
+  "inputType": "instance"
+}
