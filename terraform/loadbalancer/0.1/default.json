@@ -1,0 +1,76 @@
+{
+  "kind": "loadbalancer",
+  "flavor": "default",
+  "version": "latest",
+  "lifecycle": "ENVIRONMENT",
+  "disabled": false,
+  "provided": false,
+  "metadata": {
+  },
+  "spec": {
+    "internal": false,
+    "authenticated": false,
+    "size": {
+      "cpu": 1,
+      "memory": 1
+    },
+    "domains": {
+    },
+    "rules": {
+    }
+  },
+  "composition": {
+    "helm_ingress": {
+      "kind": "helm",
+      "flavor": "default",
+      "version": "latest",
+      "lifecycle": "ENVIRONMENT_BOOTSTRAP",
+      "disabled": false,
+      "provided": false,
+      "metadata": {
+      },
+      "spec": {
+        "namespace": "default",
+        "values": {
+          "controller": {
+            "metrics": {
+              "enabled": true,
+              "service": {
+                "type": "ClusterIP",
+                "annotations": {
+                  "prometheus.io/scrape": "true",
+                  "prometheus.io/port": "10254"
+                }
+              },
+              "serviceMonitor": {
+                "enabled": false
+              }
+            },
+            "minAvailable": 1,
+            "rbac": {
+              "create": true
+            },
+            "autoscaling": {
+              "enabled": true,
+              "minReplicas": 2,
+              "maxReplicas": 5
+            },
+            "podAnnotations": {
+              "cluster-autoscaler.kubernetes.io/safe-to-evict": "never"
+            },
+            "podLabels": {
+              "prometheus.io/path": "metrics",
+              "prometheus.io/port": "10254",
+              "prometheus.io/scrape": "true"
+            },
+            "config": {
+              "enable-underscores-in-headers": true
+            }
+          }
+        }
+      },
+      "out": {
+      }
+    }
+  }
+}

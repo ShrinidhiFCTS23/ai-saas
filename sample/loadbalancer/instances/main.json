@@ -46,8 +46,8 @@
       }
     }
   },
-  "advanced": {
-    "ingress-helm": {
+  "composition": {
+    "helm_ingress": {
       "spec": {
         "chart": "",
         "repository": "",

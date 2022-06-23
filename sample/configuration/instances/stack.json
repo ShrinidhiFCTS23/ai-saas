@@ -21,6 +21,7 @@
     "variables": {
       "NEW_RELIC_KEY": "value",
       "REGION": "value"
-    }
+    },
+    "env_unique_name": ""
   }
 }

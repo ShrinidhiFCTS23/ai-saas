@@ -1,18 +1,13 @@
 {
-  "provides": "loadbalancer",
+  "provides": "helm",
   "flavour": "default",
   "supportedCloud": ["all"],
   "version": "0.1",
   "dependsOn": [
-    "module.prometheus"
   ],
   "lifecycle": "ENVIRONMENT",
   "inputType": "instance",
   "composition": {
-    "helm_ingress": {
-      "description": "doc url",
-      "provider": "helm",
-      "flavor": "default"
-    }
+
   }
 }

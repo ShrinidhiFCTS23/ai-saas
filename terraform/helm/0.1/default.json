@@ -1,0 +1,24 @@
+{
+  "kind": "helm",
+  "flavor": "default",
+  "version": "latest",
+  "lifecycle": "ENVIRONMENT_BOOTSTRAP",
+  "disabled": false,
+  "provided": false,
+  "metadata": {
+  },
+  "spec": {
+    "namespace": "default",
+    "timeout": 300,
+    "create_namespace": true,
+    "wait": true,
+    "repository": "",
+    "version": "",
+    "recreate_pods": false,
+    "atomic": false,
+    "values": {
+    }
+  },
+  "out": {
+  }
+}

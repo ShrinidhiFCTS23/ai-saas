@@ -1,8 +1,0 @@
-{
-  "provides": "application",
-  "flavour": "default",
-  "version": "0.1",
-  "depends_on": [
-    "module.prometheus"
-  ]
-}
