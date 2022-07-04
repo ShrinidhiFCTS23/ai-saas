@@ -23,7 +23,7 @@ locals {
     } : {}
   )
 
-  instance_values = {
+  helm_ingress_input = {
     service = {
       annotations = local.annotations
     }
@@ -43,6 +43,10 @@ locals {
         "FACETS-REQUEST-ID" : "$request_id"
       }
     }
+  }
+
+  helm_ingress_input_modified = {
+
   }
 
   ingressDetails = {for k, v in flatten(var.instance.spec.domains) : k => v}
