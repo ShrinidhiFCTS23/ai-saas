@@ -110,10 +110,6 @@ Modules are broadly of two types:
 - **Instantiable**: These modules are invoked when there is a intent expressed by a user in his blueprint. This will be
   invoked once per json
 
-## General guidelines
-
-- all multi-word directories and literals should be snake cased.
-
 ## Module.json
 
 - **provides**: Resource type or intent this module is implementing
@@ -212,3 +208,41 @@ variable "environment" {
 
 }
 ```
+
+### Files
+
+Following files are recommended while implementing a module
+
+## General guidelines
+
+- all multi-word directories and literals should be snake cased.
+- **No providers should be specified in the implementation**
+- try and reuse facets modules where ever possible to avoid code duplication
+
+#### output.tf
+
+All outputs should be defined here as specified in the out schema of the intent/ resource type
+
+each key will be output separately
+
+```hcl
+output "metadata" {
+  value = helm_release.external_helm_charts.metadata
+}
+output "status" {
+  value = helm_release.external_helm_charts.status
+}
+```
+
+#### versions.tf
+
+all provider versions required by this module
+
+#### variables.tf
+
+subset of the variables out of the ones required by this module. Please note that this file is replaced in runtime with
+the standard variables so no default values are picked from here
+
+#### main.tf
+
+Implementation of the module. More tf files can be created for code organization
