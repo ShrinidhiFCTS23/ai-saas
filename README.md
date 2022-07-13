@@ -84,9 +84,11 @@ username etc.
 
 Any field in this block can be referenced in other json by following convention
 
-```hcl
-${resource_type.resource_name.out.fieldname}
-${mysql.omsdb.out.interfaces.master.host}
+```json
+{
+  "format": "${resource_type.resource_name.out.fieldname}",
+  "example": "${mysql.omsdb.out.interfaces.master.host}"
+}
 ```
 
 ## Advanced Schema
