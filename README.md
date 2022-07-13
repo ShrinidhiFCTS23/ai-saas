@@ -146,18 +146,18 @@ Modules are broadly of two types:
 }
 ```
 
-### Location
+## Location
 
 Until the module registry is made modules are picked from the modules' directory of the infra code, they can be
 organised in any folder structure
 
-### Special Modules
+## Special Modules
 
 Base Infra modules provisioning the Networking and Kubernetes infrastructure are special, and they do not follow thie
 below working. They are invoked once as per the environments cloud.
 `baseinfra_aws` `baseinfra_gcp` `baseinfra_azure`
 
-### The Working
+## The Working
 
 - A module is invoked only if it is applicable to that blueprint
 - A module is invoked only if it supports the cloud where terraform is running. supported_cloud attribute is used to
@@ -209,7 +209,7 @@ variable "environment" {
 }
 ```
 
-### Files
+## Files
 
 Following files are recommended while implementing a module
 
@@ -219,7 +219,7 @@ Following files are recommended while implementing a module
 - **No providers should be specified in the implementation**
 - try and reuse facets modules where ever possible to avoid code duplication
 
-#### output.tf
+### output.tf
 
 All outputs should be defined here as specified in the out schema of the intent/ resource type
 
@@ -234,15 +234,15 @@ output "status" {
 }
 ```
 
-#### versions.tf
+### versions.tf
 
 all provider versions required by this module
 
-#### variables.tf
+### variables.tf
 
 subset of the variables out of the ones required by this module. Please note that this file is replaced in runtime with
 the standard variables so no default values are picked from here
 
-#### main.tf
+### main.tf
 
 Implementation of the module. More tf files can be created for code organization
