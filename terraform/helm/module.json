@@ -3,7 +3,7 @@
   "flavour": "default",
   "supportedCloud": ["all"],
   "version": "0.1",
-  "dependsOn": [
+  "depends_on": [
   ],
   "lifecycle": "ENVIRONMENT",
   "inputType": "instance",

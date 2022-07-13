@@ -19,7 +19,7 @@
     "rules": {
     }
   },
-  "composition": {
+  "advanced": {
     "helm_ingress": {
       "kind": "helm",
       "flavor": "default",
