@@ -54,6 +54,8 @@ be published in this git repository in `schema` folder for all to consume and re
 type should have a sample implementation in the same repository. Both of these should not be particular to any
 implementation
 
+Format: `intent.schema`
+
 ## Traits
 
 There are many traits which may be common across resource types, like there can be multiple resources which expose their
@@ -92,6 +94,8 @@ ${mysql.omsdb.out.interfaces.master.host}
 Every implementation is free to inherit the resource type schema and add additional fields in `advanced` section. In
 case of facets implementation these schemas can be added in the schema directory, external contributors can host this
 schema anywhere. They will have to specify the schema while registring there module <Still to be implemented>
+
+Format: `implementation.intent.schema`
 
 # Intent Implementations Guidelines
 
