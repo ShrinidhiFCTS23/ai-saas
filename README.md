@@ -6,13 +6,14 @@
 
 ## Terms
 
-- **Resource**: An entity declared in facets
-- **Type of Resource** or **Intent**: A resource expressible in facets JSON representation having a defined schema
-- **Implementation of Resource** or **Flavor**: A specific way of implementing a resource, for example redis can be
-  implemented as a stateful set in kubernetes and elasticcache in AWS.
-- **Blueprint**: Collection of resource to create a functional product
-- **Environment**: Implementation of this blueprint.
-- **User**: Developer or ops person who is creating the blueprint
+| Term | Description |
+|------|-------------|
+|**Resource**| An entity declared in facets|
+|**Type of Resource** or **Intent**|A resource expressible in facets JSON representation having a defined schema|
+|**Implementation of Resource** or **Flavor**|A specific way of implementing a resource, for example redis can be implemented as a stateful set in kubernetes and elasticcache in AWS.|
+|**Blueprint**|Collection of resource to create a functional product|
+|**Environment**|Manifestation of this blueprint in any cloud|
+|**User**|Developer or ops person who is creating the blueprint|
 
 ## Basic Schema for a resource type/ intent
 
