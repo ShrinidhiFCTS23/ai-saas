@@ -1,0 +1,63 @@
+{
+  "kind": "loadbalancer",
+  "flavor": "default",
+  "version": "latest",
+  "lifecycle": "ENVIRONMENT<default specified in module, need not be overriden>",
+  "disabled": false,
+  "provided": false,
+  "metadata": {
+  },
+  "spec": {
+    "internal": true,
+    "authenticated": true,
+    "size": {
+      "cpu": 1,
+      "memory": 1
+    },
+    "domains": {
+      "mpl-main": {
+        "certificateRef": "Secret Name",
+        "url": "mpl.com"
+      }
+    },
+    "rules": {
+      "api-routing": {
+        "path": "/",
+        "prefix": "app1",
+        "service": "${application.app1.out.interfaces.grpc.host}",
+        "port": "${application.app1.out.interfaces.grpc.port}"
+      }
+    }
+  },
+  "out": {
+    "comment": "Will be generated, or can be provided",
+    "interface": {
+      "default": {
+        "port": 443,
+        "host": "xyz.com",
+        "username": "user",
+        "password": "password"
+      },
+      "mpl-main": {
+        "port": 443,
+        "host": "mpl.com",
+        "username": "user",
+        "password": "password"
+      }
+    }
+  },
+  "composition": {
+    "helm_ingress": {
+      "spec": {
+        "chart": "",
+        "repository": "",
+        "comment": "check here for all attributes https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release",
+        "value": {
+          "example": {
+            "region": "${stack.out.variables.REGION}"
+          }
+        }
+      }
+    }
+
+}

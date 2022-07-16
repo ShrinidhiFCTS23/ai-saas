@@ -1,0 +1,6 @@
+{
+  "port": 1000,
+  "host": "app1.namespace",
+  "username": "user",
+  "password": "password"
+}

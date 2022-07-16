@@ -96,7 +96,7 @@ Any field in this block can be referenced in other json by following convention
 
 Every implementation is free to inherit the resource type schema and add additional fields in `advanced` section. In
 case of facets implementation these schemas can be added in the schema directory, external contributors can host this
-schema anywhere. They will have to specify the schema while registring there module <Still to be implemented>
+schema anywhere. They will have to specify the schema while registering there module <Still to be implemented>
 
 Format: `implementation.intent.schema`
 
