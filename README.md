@@ -89,7 +89,7 @@ The advanced property is an optional field that contains additional fields that 
 | google_cloud_storage          | default | 0.1     | https://facets-cloud.github.io/facets-schemas/schemas/google_cloud_storage.schema.json       | [Sample](schemas/google_cloud_storage/google_cloud_storage.schema.json)   | [Readme](schemas/google_cloud_storage/google_cloud_storage.schema.md)             |
 
 
-## Additional links
+# Additional links
 
 | Topic                                        | Link                                                                                                  |
 | -------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
