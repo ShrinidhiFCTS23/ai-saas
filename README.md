@@ -87,3 +87,99 @@ The advanced property is an optional field that contains additional fields that 
 | cloudfront           | default           | 0.1     | https://facets-cloud.github.io/facets-schemas/schemas/cloudfront/cloudfront.schema.json               | [Sample](schemas/cloudfront/cloudfront.default.sample.json)               | [Readme](schemas/cloudfront/cloudfront.schema.md)               |
 | service_bus          | azure_service_bus | 0.1     | https://facets-cloud.github.io/facets-schemas/schemas/service_bus.azure_service_bus.schema.json       | [Sample](schemas/service_bus/service_bus.azure_service_bus.schema.json)   | [Readme](schemas/service_bus/service_bus.schema.md)             |
 | google_cloud_storage          | default | 0.1     | https://facets-cloud.github.io/facets-schemas/schemas/google_cloud_storage.schema.json       | [Sample](schemas/google_cloud_storage/google_cloud_storage.schema.json)   | [Readme](schemas/google_cloud_storage/google_cloud_storage.schema.md)             |
+
+
+## Additional links
+
+| Topic                                        | Link                                                                                                  |
+| -------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Artifact Management                          | [Link](facets-docs/register-artifact.md)                                                              |
+| accounts-concept                             | [Link](facets-docs/Concepts/accounts.md)                                                              |
+| artifacts-concept                            | [Link](facets-docs/Concepts/artifacts.md)                                                             |
+| blueprint-concept                            | [Link](facets-docs/Concepts/blueprint.md)                                                             |
+| controlplnae-concept                         | [Link](facets-docs/Concepts/control-plane.md)                                                         |
+| environment-concept                          | [Link](facets-docs/Concepts/control-plane.md)                                                         |
+| iac-concept                                  | [Link](facets-docs/Concepts/iac-using-facets.md)                                                      |
+| introduction-concept                         | [Link](facets-docs/Concepts/introduction-to-concepts.md)                                              |
+| release-concept                              | [Link](facets-docs/Concepts/releases-concept.md)                                                      |
+| resource-json-concept                        | [Link](facets-docs/Concepts/resource-json.md)                                                         |
+| authentication-setup                         | [Link](facets-docs/Deployment%20Controller/authentication-setup.md)                                   |
+| Customer-support                             | [Link](facets-docs/Deployment%20Controller/customer-support-process.md)                               |
+| Override-clone                               | [Link](facets-docs/Deployment%20Controller/override-resource-definition-in-an-environment-clone.md)   |
+| Override                                     | [Link](facets-docs/Deployment%20Controller/override-resource-defintion-in-an-environment.md)          |
+| trigger-hotfix-release                       | [Link](facets-docs/Deployment%20Controller/trigger-a-hotfix-release.md)                               |
+| trigger-release                              | [Link](facets-docs/Deployment%20Controller/trigger-a-release.md)                                      |
+| continuous-delivery-pipeline                 | [Link](facets-docs/Environments/continuous-delivery-pipelines.md)                                     |
+| environment variables                        | [Link](facets-docs/Environments/environment-variables-and-secrets.md)                                 |
+| deploy-app-example-part-1                    | [Link](facets-docs/Example%20Guides/deploy-a-simple-flask-application/part-1-deploy-the-flask-app.md) |
+| connect-mongo-app-example-part-2             | [Link](facets-docs/Example%20Guides/deploy-a-simple-flask-application/part-2-connect-a-mongodb.md)    |
+| deploy-sample-app                            | [Link](facets-docs/Example%20Guides/deploy-a-simple-flask-application.md)                             |
+| self-host-kill-bill                          | [Link](facets-docs/Example%20Guides/self-host-kill-bill.md)                                           |
+| build-vs-buy                                 | [Link](facets-docs/Facets-Cloud%20Primer/build-vs-buy.md)                                             |
+| facets-vs-terraform                          | [Link](facets-docs/Facets-Cloud%20Primer/facets-vs-terraform.md)                                      |
+| getting-started                              | [Link](facets-docs/Facets-Cloud%20Primer/getting-started.md)                                          |
+| supported platforms                          | [Link](facets-docs/Facets-Cloud%20Primer/supported-platforms-and-services.md)                         |
+| ci-integrations                              | [Link](facets-docs/Feature%20Guides/ci-integration.md)                                                |
+| landing-page                                 | [Link](facets-docs/Feature%20Guides/landing-page-guides.md)                                           |
+| managing-iac                                 | [Link](facets-docs/Feature%20Guides/manage-iac-versions.md)                                           |
+| peering                                      | [Link](facets-docs/Feature%20Guides/peering.md)                                                       |
+| user-access                                  | [Link](facets-docs/Feature%20Guides/restrict-user-access-to-environments.md)                          |
+| template-inputs                              | [Link](facets-docs/Feature%20Guides/template-inputs.md)                                               |
+| user-management                              | [Link](facets-docs/Feature%20Guides/user-management.md)                                               |
+| blueprint-designer                           | [Link](facets-docs/Features/blueprint-designer.md)                                                    |
+| cost-explorer                                | [Link](facets-docs/Features/cloud-cost-explorer.md)                                                   |
+| facets-ctl                                   | [Link](facets-docs/Features/command-line-tool-for-facets.md)                                          |
+| config-service                               | [Link](facets-docs/Features/configuration-management-for-services.md)                                 |
+| external-tools                               | [Link](facets-docs/Features/external-tools-and-usage.md)                                              |
+| notifications                                | [Link](facets-docs/Features/notifications.md)                                                         |
+| pipeline                                     | [Link](facets-docs/Features/pipeline.md)                                                              |
+| user-management-2                            | [Link](facets-docs/Features/user-management-2.md)                                                     |
+| create an environment                        | [Link](facets-docs/Getting%20Started/create-an-environment.md)                                        |
+| create your blueprint                        | [Link](facets-docs/Getting%20Started/create-your-first-blueprint.md)                                  |
+| incremental-migration                        | [Link](facets-docs/Getting%20Started/incremental-migration.md)                                        |
+| launch an environment                        | [Link](facets-docs/Getting%20Started/launch-environment.md)                                           |
+| setup controlplane                           | [Link](facets-docs/Getting%20Started/setup-your-control-plane.md)                                     |
+| adding a resource                            | [Link](facets-docs/Guides/adding-resources.md)                                                        |
+| artifact history and rollback                | [Link](facets-docs/Guides/artifact-history-and-rollback.md)                                           |
+| centralized override management              | [Link](facets-docs/Guides/centralized-override-management.md)                                         |
+| ci-rules                                     | [Link](facets-docs/Guides/ci-rules.md)                                                                |
+| creating a ci integration                    | [Link](facets-docs/Guides/creating-a-ci-integration.md)                                               |
+| creating promotion workflow                  | [Link](facets-docs/Guides/creating-a-promotion-workflow.md)                                           |
+| Custom release streams                       | [Link](facets-docs/Guides/custom-release-streams.md)                                                  |
+| integrating cloud accounts                   | [Link](facets-docs/Guides/integrating-cloud-accounts.md)                                              |
+| integrating vcs accounts                     | [Link](facets-docs/Guides/integrating-vcs-accounts.md)                                                |
+| manage iac                                   | [Link](facets-docs/Guides/manage-iac.md)                                                              |
+| map custom domains                           | [Link](facets-docs/Guides/map-custom-domains.md)                                                      |
+| notifications channels subscription          | [Link](facets-docs/Guides/notification-channels-subscriptions.md)                                     |
+| performing release                           | [Link](facets-docs/Guides/performing-releases.md)                                                     |
+| rolling restart of pods                      | [Link](facets-docs/Guides/rolling-restart-of-pods.md)                                                 |
+| scheduling releases                          | [Link](facets-docs/Guides/scheduling-releases.md)                                                     |
+| setting delivery pipeline                    | [Link](facets-docs/Guides/setting-up-the-delivery-pipeline.md)                                        |
+| view dashboard for k8s events in grafana     | [Link](facets-docs/Guides/viewing-persistent-dashboard-for-k8s-events-in-grafana.md)                  |
+| default ci rule using api                    | [Link](facets-docs/Modifying%20Default%20CI%20Rule/default-ci-rule-using-api.md)                      |
+| get artifact routing rule                    | [Link](facets-docs/Modifying%20Default%20CI%20Rule/get-artifact-routing-rule.md)                      |
+| update artifact routing rule                 | [Link](facets-docs/Modifying%20Default%20CI%20Rule/update-artifact-routing-rule.md)                   |
+| modules                                      | [Link](facets-docs/Modules/modules.md)                                                                |
+| advanced filters for notifications           | [Link](facets-docs/Notifications/advanced-filters-for-notifications.md)                               |
+| release                                      | [Link](facets-docs/Releases-%20Rollbacks%20and%20Restarts/releases.md)                                |
+| override resource in cluster                 | [Link](facets-docs/Resources/overriding-resources-in-a-cluster.md)                                    |
+| resource center                              | [Link](facets-docs/Resources/resource-center.md)                                                      |
+| toggle a resource in an environment          | [Link](facets-docs/Resources/toggle-an-application-in-an-environment.md)                              |
+| resource details                             | [Link](facets-docs/Resources/resource-center/resource-details.md)                                     |
+| resource type application                    | [Link](facets-docs/Resources/resource-center/resource-type-application.md)                            |
+| registering an artifact                      | [Link](facets-docs/Service/registering-an-artifact.md)                                                |
+| Tools and dashboards                         | [Link](facets-docs/Tools%20and%20Dashboards/access-wetty-from-facets-control-plane.md)                |
+| creating a user group                        | [Link](facets-docs/User%20Management/creating-a-user-group.md)                                        |
+| creating a user                              | [Link](facets-docs/User%20Management/creating-a-user.md)                                              |
+| custom roles                                 | [Link](facets-docs/User%20Management/custom-roles.md)                                                 |
+| google oauth integration                     | [Link](facets-docs/User%20Management/google-oauth-integration-for-user-management.md)                 |
+| integrating with azure aad                   | [Link](facets-docs/User%20Management/integrating-with-azure-ad.md)                                    |
+| integrating with okta                        | [Link](facets-docs/User%20Management/integrating-with-okta.md)                                        |
+| integrating with onelogin                    | [Link](facets-docs/User%20Management/integrating-with-onelogin.md)                                    |
+| user management 1                            | [Link](facets-docs/User%20Management/user-management-1.md)                                            |
+| user management permissions                  | [Link](facets-docs/User%20Management/user-management-permissions.md)                                  |
+| get list of n artifacts                      | [Link](facets-docs/Versioned%20Resources/get-list-of-n-artifacts.md)                                  |
+| get versioning key                           | [Link](facets-docs/Versioned%20Resources/get-versioning-key.md)                                       |
+| rollback an artifact for a specific resource | [Link](facets-docs/Versioned%20Resources/rollback-an-artifact-for-a-specific-resource.md)             |
+|  trigger rollback for an artifact                                            | [Link](facets-docs/Versioned%20Resources/trigger-rollback-for-an-artifact.md)                                                                                                      |
+
